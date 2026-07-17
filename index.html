@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supreme Dallakoti | Software Engineer</title>
+<meta name="description" content="Software engineer and computer science graduate who builds, ships, and operates production software end to end.">
+
+<script>
+  /* Set theme before first paint, avoids a light/dark flash on load */
+  (function () {
+    try {
+      var pref = localStorage.getItem("theme-preference") || "auto";
+      var theme = pref;
+      if (pref === "auto") {
+        var h = new Date().getHours();
+        theme = (h >= 20 || h < 6) ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Public+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="dot-field" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav" id="site-nav">
+  <a class="site-nav__mark" href="#top">SD</a>
+  <nav class="site-nav__links" aria-label="Primary">
+    <button class="site-nav__link" data-scroll-to="work">Work</button>
+    <button class="site-nav__link" data-scroll-to="life">Life</button>
+    <button class="site-nav__link" data-scroll-to="contact">Contact</button>
+    <div class="theme-toggle" id="theme-toggle" role="group" aria-label="Theme">
+      <span class="theme-toggle__indicator" id="theme-toggle-indicator" aria-hidden="true"></span>
+      <button class="theme-toggle__option" data-theme-option="light">Day</button>
+      <button class="theme-toggle__option" data-theme-option="dark">Night</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+      <h1 class="hero__name" data-reveal>
+        <span class="hero__name-line">Supreme</span>
+        <span class="hero__name-line hero__name-line--italic">Dallakoti</span>
+      </h1>
+      <p class="hero__tagline" data-reveal>
+        Software engineer by trade, and a person by every other measure.
+        This is where both live.
+      </p>
+
+      <div class="hero__fork" data-reveal>
+        <button class="fork-path" data-scroll-to="work">
+          <span class="fork-path__label">Work</span>
+          <span class="fork-path__sub">What I build</span>
+        </button>
+        <span class="fork-path__divider" aria-hidden="true"></span>
+        <button class="fork-path" data-scroll-to="life">
+          <span class="fork-path__label">Life</span>
+          <span class="fork-path__sub">What I believe</span>
+        </button>
+      </div>
+    </div>
+
+    <button class="scroll-cue" data-scroll-to="work" aria-label="Scroll down">
+      <span class="scroll-cue__line"></span>
+    </button>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="section section--work" id="work">
+    <div class="section__header">
+      <span class="section__index" data-reveal>01</span>
+      <h2 class="section__title" data-reveal>Work</h2>
+      <p class="section__subtitle" data-reveal>Experience, education, and selected projects.</p>
+    </div>
+
+    <p class="about-blurb" data-reveal>
+      Software engineer and computer science graduate who builds, ships, and operates
+      production software end to end. Co-creator of a live cross-platform app with
+      daily-active users, working full-stack across Flutter, a Node.js and REST back
+      end, and a SQL data layer. Test-driven in practice and a fast learner across new
+      languages and tools.
+    </p>
+
+    <div class="experience">
+      <h3 class="experience__heading" data-reveal>Experience</h3>
+
+      <div class="experience__row" data-reveal>
+        <span class="experience__date">June 2025 - Present</span>
+        <div class="experience__body">
+          <h4 class="experience__role">Software Engineer</h4>
+          <p class="experience__org">Spark Labs, LLC · Nashville, TN · Remote</p>
+          <ul class="experience__bullets">
+            <li>Built a production cross-platform application with a fellow engineer, now serving a live, daily-active user base across front end, back end, and infrastructure.</li>
+            <li>Built and maintain backend services on a Node.js REST API with Firebase authentication and data, supporting real user traffic in production.</li>
+            <li>Developed the Flutter and Dart client, including UI/UX, custom animations, modal flows, and localization for the target market.</li>
+            <li>Drove test-driven development throughout, writing and maintaining a suite of unit tests to protect core flows and prevent regressions as the product evolved.</li>
+            <li>Reached 700+ users during pre-release and 100+ active users within the first five days of public launch, improving engagement through iterative UX refinement.</li>
+            <li>Share ownership of the full software lifecycle: feature design, implementation, deployment, monitoring, and ongoing maintenance of a live system.</li>
+          </ul>
+          <a class="experience__link" href="https://klikdate.com" target="_blank" rel="noopener">klikdate.com →</a>
+        </div>
+      </div>
+
+      <div class="experience__row" data-reveal>
+        <span class="experience__date">May - Aug 2025</span>
+        <div class="experience__body">
+          <h4 class="experience__role">Machine Learning Engineer Intern</h4>
+          <p class="experience__org">Fisk University · Nashville, TN</p>
+          <ul class="experience__bullets">
+            <li>Engineered a federated learning pipeline that trained models across decentralized data sources without centralizing sensitive datasets, applying privacy-preserving distributed training techniques.</li>
+            <li>Developed and optimized supervised learning models in PyTorch and Scikit-Learn, improving predictive performance over baseline through systematic feature engineering and hyperparameter tuning.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience__row" data-reveal>
+        <span class="experience__date">Sept - Dec 2023</span>
+        <div class="experience__body">
+          <h4 class="experience__role">Graphic Designer</h4>
+          <p class="experience__org">The Hawkeye, University of Louisiana Monroe · Monroe, LA</p>
+          <ul class="experience__bullets">
+            <li>Redesigned the publication's visual identity, contributing to a 24% increase in print circulation and 35% growth in online readership.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="education">
+      <h3 class="experience__heading" data-reveal>Education</h3>
+      <div class="experience__row" data-reveal>
+        <span class="experience__date">May 2026</span>
+        <div class="experience__body">
+          <h4 class="experience__role">B.S. in Computer Science</h4>
+          <p class="experience__org">Fisk University · GPA 3.9 / 4.0</p>
+          <p class="education__coursework">
+            Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming,
+            Database Management, Machine Learning, Discrete Mathematics I/II, Applied
+            Linear Algebra, Statistics &amp; Probability
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects">
+      <article class="project-card" data-reveal>
+        <div class="project-card__meta">
+          <span class="tag">Game</span>
+          <span class="tag">Flame</span>
+        </div>
+        <h3 class="project-card__title">Acornis</h3>
+        <p class="project-card__desc">
+          An endless vertical runner built with Flutter's Flame engine. Play
+          as a squirrel leaping from tree to tree, catching acorns and
+          dodging branches.
+        </p>
+        <div class="project-card__stack">
+          <span class="stack-chip">Flutter</span>
+          <span class="stack-chip">Dart</span>
+          <span class="stack-chip">Flame</span>
+        </div>
+        <a class="project-card__link" href="https://elsupremoo.github.io/acornis/" target="_blank" rel="noopener">Play the game →</a>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__meta">
+          <span class="tag">C++</span>
+          <span class="tag">Graphics</span>
+        </div>
+        <h3 class="project-card__title">Terminal ASCII Engine</h3>
+        <p class="project-card__desc">
+          A cross-platform ASCII 3D rendering engine that draws scenes
+          entirely inside a terminal window using signed distance functions
+          and raymarching, no OpenGL, no DirectX. Includes a "Time Attack"
+          mode where you shoot down moving 3D targets against the clock.
+        </p>
+        <div class="project-card__stack">
+          <span class="stack-chip">C++17</span>
+          <span class="stack-chip">Raymarching / SDF</span>
+          <span class="stack-chip">ANSI Escape Codes</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/elSupremoo/terminal_ascii_engine" target="_blank" rel="noopener">View repo →</a>
+      </article>
+    </div>
+
+    <div class="skills" data-reveal>
+      <h3 class="skills__heading">Skills</h3>
+
+      <div class="skills__group">
+        <span class="skills__label">Languages</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">Java</span>
+          <span class="stack-chip">Python</span>
+          <span class="stack-chip">JavaScript</span>
+          <span class="stack-chip">Dart</span>
+          <span class="stack-chip">Kotlin</span>
+          <span class="stack-chip">SQL</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">Backend &amp; Web</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">Node.js</span>
+          <span class="stack-chip">REST APIs</span>
+          <span class="stack-chip">Firebase</span>
+          <span class="stack-chip">Spring Boot</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">Mobile</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">Flutter</span>
+          <span class="stack-chip">Android SDK</span>
+          <span class="stack-chip">Jetpack Compose</span>
+          <span class="stack-chip">Room / SQLite</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">Databases</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">SQL</span>
+          <span class="stack-chip">Firestore</span>
+          <span class="stack-chip">SQLite</span>
+          <span class="stack-chip">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">Machine Learning</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">PyTorch</span>
+          <span class="stack-chip">Scikit-Learn</span>
+          <span class="stack-chip">Pandas</span>
+          <span class="stack-chip">NumPy</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">Practices &amp; Tools</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">TDD</span>
+          <span class="stack-chip">Unit Testing</span>
+          <span class="stack-chip">Git</span>
+          <span class="stack-chip">Agile</span>
+          <span class="stack-chip">Android Studio</span>
+          <span class="stack-chip">Xcode</span>
+          <span class="stack-chip">VS Code</span>
+          <span class="stack-chip">Figma</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ LIFE ============ -->
+  <section class="section section--life" id="life">
+    <div class="section__header">
+      <span class="section__index" data-reveal>02</span>
+      <h2 class="section__title section__title--italic" data-reveal>Life</h2>
+      <p class="section__subtitle" data-reveal>Ideas, interests, and what I care about outside of work.</p>
+    </div>
+
+    <blockquote class="ideology" data-reveal>
+      <p>
+        Big fan of languages and linguistics, airplanes, and road signs. Yes,
+        I enjoy reading the MUTCD in my free time. I also enjoy:
+      </p>
+    </blockquote>
+
+    <div class="life-entries">
+      <div class="life-entry" data-reveal>
+        <span class="life-entry__index">i</span>
+        <div class="life-entry__body">
+          <h4 class="life-entry__title">Music</h4>
+          <p class="life-entry__note">
+            Gotta put these IEMs to use, right? Proud title holder for top
+            0.01% of monthly listeners for One Direction on YouTube Music,
+            for a year straight.
+          </p>
+        </div>
+      </div>
+
+      <div class="life-entry" data-reveal>
+        <span class="life-entry__index">ii</span>
+        <div class="life-entry__body">
+          <h4 class="life-entry__title">Cooking</h4>
+          <p class="life-entry__note">
+            I love anything Nepali. A rich me would eat Mo:Mo every day.
+            A poor me is happy with an avocado toast.
+          </p>
+        </div>
+      </div>
+
+      <div class="life-entry" data-reveal>
+        <span class="life-entry__index">iii</span>
+        <div class="life-entry__body">
+          <h4 class="life-entry__title">Video Games</h4>
+          <p class="life-entry__note">
+            My idea of therapy. I love first-person shooters like CS (800 hours)
+            and Valorant, but I also enjoy story-driven games.
+          </p>
+          <p class="life-entry__meta">
+            Played through: the Grand Theft Auto trilogy of IV, V, and Vice
+            City, both Red Dead Redemptions, Max Payne, Far Cry 3 and 4,
+            Portal, and Half-Life, plus plenty more.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer__top" data-reveal>
+      <h2 class="footer__cta">Let's talk.</h2>
+      <a class="footer__email" href="mailto:supreme.dallakoti01@gmail.com">supreme.dallakoti01@gmail.com</a>
+      <p class="footer__phone">(929) 603-0454 · Fort Worth, TX</p>
+    </div>
+
+    <div class="footer__bottom" data-reveal>
+      <div class="footer__socials">
+        <a href="https://github.com/elSupremoo" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/supremedallakoti" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <button class="footer__top-link" data-scroll-to="top">Back to top ↑</button>
+    </div>
+
+    <p class="footer__legal">© 2026 Supreme Dallakoti.</p>
+  </footer>
+
+</main>
+
+<button class="tweaks-toggle" id="tweaks-toggle" aria-label="Open display settings">Tweaks</button>
+<div class="tweaks-panel" id="tweaks-panel">
+  <div class="tweaks-panel__header">
+    <span>Tweaks</span>
+    <button id="tweaks-close" aria-label="Close">×</button>
+  </div>
+  <label class="tweaks-panel__row">
+    <span>Grain texture</span>
+    <input type="checkbox" id="tweak-grain" checked>
+  </label>
+  <label class="tweaks-panel__row">
+    <span>Reduce motion</span>
+    <input type="checkbox" id="tweak-motion">
+  </label>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
