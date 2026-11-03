@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Supreme Dallakoti | Software Engineer</title>
-<meta name="description" content="Software engineer and computer science graduate who builds, ships, and operates production software end to end.">
+<meta name="description" content="Supreme Dallakoti, software engineer building mobile apps and computer vision systems. Co-founder of Klik.">
 
 <script>
   /* Set theme before first paint, avoids a light/dark flash on load */
@@ -59,8 +59,8 @@
         <span class="hero__name-line hero__name-line--italic">Dallakoti</span>
       </h1>
       <p class="hero__tagline" data-reveal>
-        Software engineer by trade, and a person by every other measure.
-        This is where both live.
+        Software engineer building mobile apps and computer vision systems.
+        <span class="nowrap">Co-founder</span> of Klik.
       </p>
 
       <div class="hero__fork" data-reveal>
@@ -86,34 +86,54 @@
     <div class="section__header">
       <span class="section__index" data-reveal>01</span>
       <h2 class="section__title" data-reveal>Work</h2>
-      <p class="section__subtitle" data-reveal>Experience, education, and selected projects.</p>
+      <p class="section__subtitle" data-reveal>Experience, education, projects, and awards.</p>
     </div>
 
     <p class="about-blurb" data-reveal>
-      Software engineer and computer science graduate who builds, ships, and operates
-      production software end to end. Co-creator of a live cross-platform app with
-      daily-active users, working full-stack across Flutter, a Node.js and REST back
-      end, and a SQL data layer. Test-driven in practice and a fast learner across new
-      languages and tools.
+      I'm a 2026 CS graduate from Fisk University and the <span class="nowrap">co-founder</span> of Klik, a
+      dating app for the Nepali community with 5,000+ downloads on iOS and Android.
+      I work across Flutter, Node.js and PyTorch, and I like building things people
+      actually use.
     </p>
 
     <div class="experience">
       <h3 class="experience__heading" data-reveal>Experience</h3>
 
       <div class="experience__row" data-reveal>
-        <span class="experience__date">June 2025 - Present</span>
+        <span class="experience__date">June 2026 - Present</span>
         <div class="experience__body">
-          <h4 class="experience__role">Software Engineer</h4>
-          <p class="experience__org">Spark Labs, LLC · Nashville, TN · Remote</p>
+          <h4 class="experience__role">Founding Software Engineer (Co-Founder)</h4>
+          <p class="experience__org">Spark Labs, LLC · Nashville, TN (Remote)</p>
+          <p class="experience__summary">
+            Klik is a culturally localized dating app for the Nepali and Non-Resident
+            Nepali community. It started as a project in April 2025, v1.0 shipped in
+            May 2026, and the current version is 1.1.0.
+          </p>
           <ul class="experience__bullets">
-            <li>Built a production cross-platform application with a fellow engineer, now serving a live, daily-active user base across front end, back end, and infrastructure.</li>
-            <li>Built and maintain backend services on a Node.js REST API with Firebase authentication and data, supporting real user traffic in production.</li>
-            <li>Developed the Flutter and Dart client, including UI/UX, custom animations, modal flows, and localization for the target market.</li>
-            <li>Drove test-driven development throughout, writing and maintaining a suite of unit tests to protect core flows and prevent regressions as the product evolved.</li>
-            <li>Reached 700+ users during pre-release and 100+ active users within the first five days of public launch, improving engagement through iterative UX refinement.</li>
-            <li>Share ownership of the full software lifecycle: feature design, implementation, deployment, monitoring, and ongoing maintenance of a live system.</li>
+            <li>Co-founded and launched Klik, with 5,000+ downloads across iOS and Android.</li>
+            <li>Owned the Flutter app's frontend architecture and UI/UX, real-time chat and push notifications. Also owned App Store Optimization.</li>
+            <li>Built the "Klik Diamond" subscription system across the backend and the app. RevenueCat webhooks handle the full lifecycle (purchase, renewal, cancel, expire, refund), eSewa and Khalti payments for Nepal use HMAC-SHA256 signature verification, and every payment source converges on one code path, with real-time entitlement sync over Socket.IO.</li>
+            <li>Built a native SwiftUI "Liquid Glass" navigation bar embedded in Flutter, with a remote kill switch and a crash canary that falls back automatically. On-device profiling showed 0 janky frames in over 3,000.</li>
+            <li>Built account moderation enforcement. Bans and suspensions gate every HTTP and Socket.IO request, revoke sessions live, and block re-signup.</li>
+            <li>Designed a self-hosted ONNX image-moderation pipeline with a three-tier policy (block, escalate, pass). In an evaluation on 9,978 images, 546 of them hand-reviewed, it caught all 18 unsafe images. Only 1.93% of images escalated to AWS Rekognition, which cut Rekognition costs by about 98%.</li>
+            <li>Managed releases from v1.0 to 1.1.0 through App Store review, and resolved two App Review rejections.</li>
+            <li>Found and fixed a gift-code brute-force risk through threat modeling. Redesigned a core schema with an idempotent, backward-compatible migration.</li>
+            <li>Shipped full Nepali localization (599 strings), Android 16 KB page-size compliance and influencer referral attribution, plus admin dashboard pages in Next.js/TypeScript.</li>
           </ul>
-          <a class="experience__link" href="https://klikdate.com" target="_blank" rel="noopener">klikdate.com →</a>
+          <p class="experience__note">
+            Klik's stack, built as a team: a Flutter/Dart app; a Node.js/Express backend
+            with MongoDB Atlas and Socket.IO; Firebase Auth and FCM; Docker Compose on a
+            Hetzner VPS with Caddy, deployed by GitHub Actions; Sentry monitoring; and a
+            Next.js admin dashboard and website on Vercel.
+          </p>
+          <p class="experience__note">
+            Built with Claude Code: I read every diff and run the tests before I commit.
+          </p>
+          <div class="experience__links">
+            <a class="experience__link" href="https://klikdate.com" target="_blank" rel="noopener">klikdate.com →</a>
+            <a class="experience__link" href="https://apps.apple.com/np/app/klik-the-nepali-dating-app/id6768826588" target="_blank" rel="noopener">App Store →</a>
+            <a class="experience__link" href="https://play.google.com/store/apps/details?id=com.sparklabs.klik" target="_blank" rel="noopener">Google Play →</a>
+          </div>
         </div>
       </div>
 
@@ -123,9 +143,17 @@
           <h4 class="experience__role">Machine Learning Engineer Intern</h4>
           <p class="experience__org">Fisk University · Nashville, TN</p>
           <ul class="experience__bullets">
-            <li>Engineered a federated learning pipeline that trained models across decentralized data sources without centralizing sensitive datasets, applying privacy-preserving distributed training techniques.</li>
-            <li>Developed and optimized supervised learning models in PyTorch and Scikit-Learn, improving predictive performance over baseline through systematic feature engineering and hyperparameter tuning.</li>
+            <li>Built a federated learning pipeline in PyTorch: FedAvg from scratch across 5 simulated clients over 50 rounds, training a 1D CNN to detect attacks in smart-grid telemetry without centralizing data.</li>
+            <li>Reached 99.3% accuracy and 0.95 macro-F1 on 17,280 held-out samples. Recall on the rarest class (0.5% of the data) rose from 47% to 98%.</li>
+            <li>Built the data pipeline in Pandas and scikit-learn: feature selection, standardization and sliding-window sequences.</li>
           </ul>
+          <p class="experience__note">
+            I later re-examined this result rigorously in
+            <a href="#fedpriv-bench">fedpriv-bench</a>.
+          </p>
+          <div class="experience__links">
+            <a class="experience__link" href="https://github.com/elSupremoo/MSIPP" target="_blank" rel="noopener">View repo →</a>
+          </div>
         </div>
       </div>
 
@@ -144,10 +172,14 @@
     <div class="education">
       <h3 class="experience__heading" data-reveal>Education</h3>
       <div class="experience__row" data-reveal>
-        <span class="experience__date">May 2026</span>
+        <span class="experience__date">Jan 2024 - May 2026</span>
         <div class="experience__body">
           <h4 class="experience__role">B.S. in Computer Science</h4>
-          <p class="experience__org">Fisk University · GPA 3.9 / 4.0</p>
+          <p class="experience__org">Fisk University · Nashville, TN · GPA 3.9 / 4.0</p>
+          <ul class="experience__bullets">
+            <li>Presidential Scholar (full-ride merit scholarship).</li>
+            <li>Concurrent coursework at Vanderbilt University through Fisk's bridge program.</li>
+          </ul>
           <p class="education__coursework">
             Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming,
             Database Management, Machine Learning, Discrete Mathematics I/II, Applied
@@ -155,13 +187,134 @@
           </p>
         </div>
       </div>
+      <div class="experience__row" data-reveal>
+        <span class="experience__date">Aug 2022 - Dec 2023</span>
+        <div class="experience__body">
+          <h4 class="experience__role">Undergraduate Studies</h4>
+          <p class="experience__org">University of Louisiana Monroe · Monroe, LA</p>
+          <ul class="experience__bullets">
+            <li>Presidential Scholar. Transferred to Fisk University.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
+    <h3 class="experience__heading" data-reveal>Projects</h3>
     <div class="projects">
       <article class="project-card" data-reveal>
         <div class="project-card__meta">
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Oct 2026</span>
+        </div>
+        <h3 class="project-card__title">Sanjay</h3>
+        <p class="project-card__desc">
+          Street-level image geolocation for Nepal. Locates a street-level photo
+          anywhere in Nepal from the image alone.
+        </p>
+        <ul class="project-card__points">
+          <li>Within 1 km 58.4% of the time from one view, and 74.6% from four views (median error 0.52 km and 0.29 km). Tested on 3,000 held-out locations.</li>
+          <li>Fine-tuned CLIP ViT-B/16 with a hybrid loss: geocell classification plus contrastive (InfoNCE) learning with hard negatives. This doubled within-1-km retrieval from 26% to 53%.</li>
+          <li>GPU retrieval index of 2.9 million fingerprints (356,890 locations × 8 headings), built for the whole country in about 3 hours on one 12 GB GPU.</li>
+          <li>Four-view fusion halves gross failures (errors over 50 km drop from 12.3% to 5.8%). Color augmentation raised accuracy under a warm color cast from 15% to 49%.</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="stack-chip">PyTorch</span>
+          <span class="stack-chip">open_clip</span>
+          <span class="stack-chip">CUDA</span>
+        </div>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://github.com/elSupremoo/sanjay-geolocator" target="_blank" rel="noopener">View repo →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__meta">
+          <span class="tag">Mobile</span>
+          <span class="tag">Apr 2025 - Present</span>
+        </div>
+        <h3 class="project-card__title">Klik</h3>
+        <p class="project-card__desc">
+          A culturally localized dating app for the Nepali and Non-Resident Nepali
+          community, which I <span class="nowrap">co-founded</span>. 5,000+ downloads across iOS and Android.
+        </p>
+        <ul class="project-card__points">
+          <li>Owned the Flutter app's frontend architecture and UI/UX, real-time chat and push notifications.</li>
+          <li>Built the "Klik Diamond" subscription system across the backend and the app: RevenueCat, eSewa and Khalti payments converge on one code path, with real-time entitlement sync over Socket.IO.</li>
+          <li>Designed a self-hosted ONNX image-moderation pipeline. Only 1.93% of images escalated to AWS Rekognition, which cut Rekognition costs by about 98%.</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="stack-chip">Flutter</span>
+          <span class="stack-chip">SwiftUI</span>
+          <span class="stack-chip">Node.js</span>
+          <span class="stack-chip">Socket.IO</span>
+          <span class="stack-chip">RevenueCat</span>
+          <span class="stack-chip">ONNX Runtime</span>
+        </div>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://klikdate.com" target="_blank" rel="noopener">klikdate.com →</a>
+          <a class="project-card__link" href="https://apps.apple.com/np/app/klik-the-nepali-dating-app/id6768826588" target="_blank" rel="noopener">App Store →</a>
+          <a class="project-card__link" href="https://play.google.com/store/apps/details?id=com.sparklabs.klik" target="_blank" rel="noopener">Google Play →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__meta">
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Nov 2026</span>
+        </div>
+        <h3 class="project-card__title">geo-trust</h3>
+        <p class="project-card__desc">
+          Can you trust a geolocation model? A follow-up to Sanjay that stress-tests
+          CLIP geolocation on the public OpenStreetView-5M benchmark (10,000 test
+          images, 195 countries).
+        </p>
+        <ul class="project-card__points">
+          <li>Robustness: heavy JPEG compression costs 41 points of accuracy, and privacy blurring costs 36.</li>
+          <li>Knowing when to abstain: answering only the most confident 10% cuts the error rate from 59.5% to 18.5%.</li>
+          <li>Conformal prediction sets hit 90.0% coverage on clean data. Under JPEG shift, retrieval coverage collapses to 34% (a "hubness" failure), and corruption-aware calibration restores it to 77%.</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="stack-chip">PyTorch</span>
+          <span class="stack-chip">open_clip</span>
+          <span class="stack-chip">OpenCV</span>
+        </div>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://github.com/elSupremoo/geo-trust" target="_blank" rel="noopener">View repo →</a>
+          <a class="project-card__link" href="https://github.com/elSupremoo/geo-trust/blob/master/REPORT.md" target="_blank" rel="noopener">Read the report →</a>
+        </div>
+      </article>
+
+      <article class="project-card" id="fedpriv-bench" data-reveal>
+        <div class="project-card__meta">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Nov 2026</span>
+        </div>
+        <h3 class="project-card__title">fedpriv-bench</h3>
+        <p class="project-card__desc">
+          Federated and private attack detection, done carefully. Re-examines my own
+          internship result on public power-grid data, with leakage-safe splits and a
+          compute-matched baseline.
+        </p>
+        <ul class="project-card__points">
+          <li>Showed that splitting random rows instead of whole scenarios inflates a model's score from 0.60 to 0.92 macro-F1.</li>
+          <li>At equal compute, federated learning matches centralized training rather than beating it (0.546 vs 0.530 macro-F1). Uneven data across clients drops it to 0.414.</li>
+          <li>Differential privacy (DP-SGD) hits rare classes hardest: at ε ≤ 8, rarest-class recall falls from 28% to 6-9%.</li>
+          <li>A 70-run, resumable experiment sweep in which every table and figure is regenerated from saved results. 14 tests.</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="stack-chip">PyTorch</span>
+          <span class="stack-chip">Opacus</span>
+          <span class="stack-chip">scikit-learn</span>
+        </div>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://github.com/elSupremoo/fedpriv-bench" target="_blank" rel="noopener">View repo →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__meta">
           <span class="tag">Game</span>
-          <span class="tag">Flame</span>
+          <span class="tag">Jul 2026</span>
         </div>
         <h3 class="project-card__title">Acornis</h3>
         <p class="project-card__desc">
@@ -169,32 +322,88 @@
           as a squirrel leaping from tree to tree, catching acorns and
           dodging branches.
         </p>
+        <ul class="project-card__points">
+          <li>A custom GLSL day/night shader, procedural obstacles that always leave a safe route, and a score-driven difficulty curve.</li>
+          <li>Built with Claude Code in about two days.</li>
+        </ul>
         <div class="project-card__stack">
           <span class="stack-chip">Flutter</span>
           <span class="stack-chip">Dart</span>
           <span class="stack-chip">Flame</span>
+          <span class="stack-chip">GLSL</span>
         </div>
-        <a class="project-card__link" href="https://elsupremoo.github.io/acornis/" target="_blank" rel="noopener">Play the game →</a>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://elsupremoo.github.io/acornis/" target="_blank" rel="noopener">Play the game →</a>
+          <a class="project-card__link" href="https://github.com/elSupremoo/acornis" target="_blank" rel="noopener">View repo →</a>
+        </div>
       </article>
 
       <article class="project-card" data-reveal>
         <div class="project-card__meta">
-          <span class="tag">C++</span>
-          <span class="tag">Graphics</span>
+          <span class="tag">Compilers</span>
+          <span class="tag">Feb - Apr 2026</span>
         </div>
-        <h3 class="project-card__title">Terminal ASCII Engine</h3>
+        <h3 class="project-card__title">Diamondback Compiler</h3>
         <p class="project-card__desc">
-          A cross-platform ASCII 3D rendering engine that draws scenes
-          entirely inside a terminal window using signed distance functions
-          and raymarching, no OpenGL, no DirectX. Includes a "Time Attack"
-          mode where you shoot down moving 3D targets against the clock.
+          A compiler from a Lisp-style language to x86-64 assembly, built over four
+          iterations as a course project at Fisk University.
         </p>
+        <ul class="project-card__points">
+          <li>Supports functions, recursion, loops, mutable variables and lexical scoping.</li>
+          <li>Runtime type tagging with dynamic type and overflow checks, and 16-byte stack alignment.</li>
+          <li>61 test programs.</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="stack-chip">Rust</span>
+          <span class="stack-chip">x86-64 Assembly</span>
+        </div>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://github.com/elSupremoo/adder_compiler" target="_blank" rel="noopener">View repo →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__meta">
+          <span class="tag">Graphics</span>
+          <span class="tag">Feb - Apr 2026</span>
+        </div>
+        <h3 class="project-card__title">Terminal ASCII 3D Engine</h3>
+        <p class="project-card__desc">
+          A real-time 3D renderer that runs inside a terminal window, using
+          signed-distance-function raymarching with no OpenGL or DirectX. It draws
+          seven shapes with ASCII shading.
+        </p>
+        <ul class="project-card__points">
+          <li>Free-look camera and non-blocking input.</li>
+          <li>A "Time Attack" mode where you shoot down moving 3D targets against the clock.</li>
+        </ul>
         <div class="project-card__stack">
           <span class="stack-chip">C++17</span>
           <span class="stack-chip">Raymarching / SDF</span>
           <span class="stack-chip">ANSI Escape Codes</span>
         </div>
-        <a class="project-card__link" href="https://github.com/elSupremoo/terminal_ascii_engine" target="_blank" rel="noopener">View repo →</a>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://github.com/elSupremoo/terminal_ascii_engine" target="_blank" rel="noopener">View repo →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__meta">
+          <span class="tag">Open Source</span>
+          <span class="tag">Oct 2026</span>
+        </div>
+        <h3 class="project-card__title">SLEAP</h3>
+        <p class="project-card__desc">
+          A merged documentation PR to SLEAP, a deep-learning framework for
+          multi-animal pose tracking. It clarifies the CLI's 0-based frame indexing
+          against the GUI's 1-based display.
+        </p>
+        <div class="project-card__stack">
+          <span class="stack-chip">Documentation</span>
+        </div>
+        <div class="project-card__links">
+          <a class="project-card__link" href="https://github.com/talmolab/sleap/pull/2880" target="_blank" rel="noopener">View the PR →</a>
+        </div>
       </article>
     </div>
 
@@ -202,14 +411,14 @@
       <h3 class="skills__heading">Skills</h3>
 
       <div class="skills__group">
-        <span class="skills__label">Languages</span>
+        <span class="skills__label">Mobile</span>
         <div class="skills__cloud">
-          <span class="stack-chip">Java</span>
-          <span class="stack-chip">Python</span>
-          <span class="stack-chip">JavaScript</span>
-          <span class="stack-chip">Dart</span>
-          <span class="stack-chip">Kotlin</span>
-          <span class="stack-chip">SQL</span>
+          <span class="stack-chip">Flutter / Dart</span>
+          <span class="stack-chip">Swift / SwiftUI</span>
+          <span class="stack-chip">Kotlin / Jetpack Compose</span>
+          <span class="stack-chip">Firebase</span>
+          <span class="stack-chip">RevenueCat</span>
+          <span class="stack-chip">Room / SQLite</span>
         </div>
       </div>
 
@@ -217,53 +426,104 @@
         <span class="skills__label">Backend &amp; Web</span>
         <div class="skills__cloud">
           <span class="stack-chip">Node.js</span>
-          <span class="stack-chip">REST APIs</span>
-          <span class="stack-chip">Firebase</span>
-          <span class="stack-chip">Spring Boot</span>
-        </div>
-      </div>
-
-      <div class="skills__group">
-        <span class="skills__label">Mobile</span>
-        <div class="skills__cloud">
-          <span class="stack-chip">Flutter</span>
-          <span class="stack-chip">Android SDK</span>
-          <span class="stack-chip">Jetpack Compose</span>
-          <span class="stack-chip">Room / SQLite</span>
-        </div>
-      </div>
-
-      <div class="skills__group">
-        <span class="skills__label">Databases</span>
-        <div class="skills__cloud">
-          <span class="stack-chip">SQL</span>
-          <span class="stack-chip">Firestore</span>
-          <span class="stack-chip">SQLite</span>
+          <span class="stack-chip">Express</span>
+          <span class="stack-chip">TypeScript</span>
+          <span class="stack-chip">Socket.IO</span>
           <span class="stack-chip">MongoDB</span>
+          <span class="stack-chip">Next.js / React</span>
+          <span class="stack-chip">HTML / CSS</span>
+          <span class="stack-chip">Tailwind</span>
         </div>
       </div>
 
       <div class="skills__group">
         <span class="skills__label">Machine Learning</span>
         <div class="skills__cloud">
+          <span class="stack-chip">Python</span>
           <span class="stack-chip">PyTorch</span>
-          <span class="stack-chip">Scikit-Learn</span>
+          <span class="stack-chip">CUDA</span>
+          <span class="stack-chip">open_clip</span>
+          <span class="stack-chip">scikit-learn</span>
           <span class="stack-chip">Pandas</span>
           <span class="stack-chip">NumPy</span>
+          <span class="stack-chip">OpenCV</span>
+          <span class="stack-chip">ONNX Runtime</span>
+          <span class="stack-chip">Opacus</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">ML Methods</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">Computer Vision</span>
+          <span class="stack-chip">Metric Learning</span>
+          <span class="stack-chip">Image Retrieval</span>
+          <span class="stack-chip">Federated Learning</span>
+          <span class="stack-chip">Differential Privacy</span>
+          <span class="stack-chip">Conformal Prediction</span>
+          <span class="stack-chip">Robustness Evaluation</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">Infrastructure</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">Docker Compose</span>
+          <span class="stack-chip">GitHub Actions (CI/CD)</span>
+          <span class="stack-chip">Caddy</span>
+          <span class="stack-chip">Linux Server Deployment</span>
+          <span class="stack-chip">Sentry</span>
+          <span class="stack-chip">AWS S3 &amp; Rekognition</span>
+          <span class="stack-chip">Vercel</span>
+          <span class="stack-chip">GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <span class="skills__label">Systems</span>
+        <div class="skills__cloud">
+          <span class="stack-chip">C++17</span>
+          <span class="stack-chip">Rust</span>
+          <span class="stack-chip">x86-64 Assembly</span>
         </div>
       </div>
 
       <div class="skills__group">
         <span class="skills__label">Practices &amp; Tools</span>
         <div class="skills__cloud">
-          <span class="stack-chip">TDD</span>
+          <span class="stack-chip">Git / GitHub</span>
+          <span class="stack-chip">Claude Code</span>
+          <span class="stack-chip">Figma</span>
           <span class="stack-chip">Unit Testing</span>
-          <span class="stack-chip">Git</span>
+          <span class="stack-chip">TDD</span>
           <span class="stack-chip">Agile</span>
           <span class="stack-chip">Android Studio</span>
           <span class="stack-chip">Xcode</span>
           <span class="stack-chip">VS Code</span>
-          <span class="stack-chip">Figma</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="awards">
+      <h3 class="experience__heading" data-reveal>Awards</h3>
+      <div class="experience__row" data-reveal>
+        <span class="experience__date">2022 - 2026</span>
+        <div class="experience__body">
+          <h4 class="experience__role">Presidential Scholar</h4>
+          <p class="experience__org">Fisk University and University of Louisiana Monroe</p>
+          <ul class="experience__bullets">
+            <li>Full-ride merit scholarship.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="experience__row" data-reveal>
+        <span class="experience__date">2023</span>
+        <div class="experience__body">
+          <h4 class="experience__role">Finalist, Pelican Entrepreneurship Cup</h4>
+          <p class="experience__org">University of Louisiana Monroe</p>
+          <ul class="experience__bullets">
+            <li>Pitched an AR indoor-navigation platform for large venues.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -319,8 +579,19 @@
           </p>
           <p class="life-entry__meta">
             Played through: the Grand Theft Auto trilogy of IV, V, and Vice
-            City, both Red Dead Redemptions, Max Payne, Far Cry 3 and 4,
-            Portal, and Half-Life, plus plenty more.
+            City, both Red Dead Redemptions, The Last of Us Part I and II,
+            all five mainline Uncharted games, God of War, Max Payne, Far Cry
+            3, 4, and 5, Portal, and Half-Life, plus plenty more.
+          </p>
+        </div>
+      </div>
+
+      <div class="life-entry" data-reveal>
+        <span class="life-entry__index">iv</span>
+        <div class="life-entry__body">
+          <h4 class="life-entry__title">Languages</h4>
+          <p class="life-entry__note">
+            I speak English, Nepali and Hindi fluently, plus some basic Spanish.
           </p>
         </div>
       </div>
@@ -332,7 +603,7 @@
     <div class="footer__top" data-reveal>
       <h2 class="footer__cta">Let's talk.</h2>
       <a class="footer__email" href="mailto:supreme.dallakoti01@gmail.com">supreme.dallakoti01@gmail.com</a>
-      <p class="footer__phone">(929) 603-0454 · Fort Worth, TX</p>
+      <p class="footer__location">Fort Worth, TX</p>
     </div>
 
     <div class="footer__bottom" data-reveal>
